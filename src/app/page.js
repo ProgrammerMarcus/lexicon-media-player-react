@@ -1,95 +1,113 @@
-import Image from 'next/image'
 import styles from './page.module.css'
 
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.js</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
+    <div>
+      <nav className={styles["navbar"]}>
+        <span className={styles["material-icons"]}>arrow_back_ios_new</span>
+        <p>Playlist - Generic Playlist (3)</p>
+        <span className={styles["material-icons"]}>more_vert</span>
+      </nav><div className={styles["root"]}>
+        <aside className={styles["tracks"]}>
+          <div className={styles["info-item"]}>
+            <img className={styles["info-image"]} src="/assets/cover/drums.jpg" alt="Album cover" />
+            <div className={styles["info"]}>
+              <p className={styles["info-artist"]}>Super Rockstar</p>
+              <p className={styles["info-title"]}>Crowd Apocalypse</p>
+            </div>
+            <span className={styles["material-icons"]}>play_circle</span>
+          </div>
+          <div className={styles["info-item"]}>
+            <img className={styles["info-image"]} src="/assets/cover/colorful.jpg" alt="Album cover" />
+            <div className={styles["info"]}>
+              <p className={styles["info-artist"]}>Colorful Musicman</p>
+              <p className={styles["info-title"]}>The color of P.A.I.N.</p>
+            </div>
+            <span className={styles["material-icons"]}>play_circle</span>
+          </div>
+          <div className={styles["info-item"]}>
+            <img className={styles["info-image"]} src="/assets/cover/demon.jpg" alt="Album cover" />
+            <div className={styles["info"]}>
+              <p className={styles["info-artist"]}>John Smith</p>
+              <p className={styles["info-title"]}>Space Adventure</p>
+            </div>
+            <span className={styles["material-icons"]}>play_circle</span>
+          </div>
+          <div className={styles["info-item"]}>
+            <img className={styles["info-image"]} src="/assets/cover/drums.jpg" alt="Album cover" />
+            <div className={styles["info"]}>
+              <p className={styles["info-artist"]}>Super Rockstar</p>
+              <p className={styles["info-title"]}>Why is my face</p>
+            </div>
+            <span className={styles["material-icons"]}>play_circle</span>
+          </div>
+          <div className={styles["info-item"]}>
+            <img className={styles["info-image"]} src="/assets/cover/future.jpg" alt="Album cover" />
+            <div className={styles["info"]}>
+              <p className={styles["info-artist"]}>Music Person 3</p>
+              <p className={styles["info-title"]}>Giant Face</p>
+            </div>
+            <span className={styles["material-icons"]}>play_circle</span>
+          </div>
+          <div className={styles["info-item"]}>
+            <img className={styles["info-image"]} src="/assets/cover/moon.jpg" alt="Album cover" />
+            <div className={styles["info"]}>
+              <p className={styles["info-artist"]}>Dr. Warewolf</p>
+              <p className={styles["info-title"]}>Bright Moon</p>
+            </div>
+            <span className={styles["material-icons"]}>play_circle</span>
+          </div>
+          <div className={styles["info-item"]}>
+            <img className={styles["info-image"]} src="/assets/cover/greyscale.jpg" alt="Album cover" />
+            <div className={styles["info"]}>
+              <p className={styles["info-artist"]}>Really old person</p>
+              <p className={styles["info-title"]}>Like it used to be</p>
+            </div>
+            <span className={styles["material-icons"]}>play_circle</span>
+          </div>
+          <div className={styles["info-item"]}>
+            <img className={styles["info-image"]} src="/assets/cover/colorful.jpg" alt="Album cover" />
+            <div className={styles["info"]}>
+              <p className={styles["info-artist"]}>Colorful Musicman</p>
+              <p className={styles["info-title"]}>color (feat. Dr. Warewolf)</p>
+            </div>
+            <span className={styles["material-icons"]}>play_circle</span>
+          </div>
+          <div className={styles["info-item"]}>
+            <img className={styles["info-image"]} src="/assets/cover/moon.jpg" alt="Album cover" />
+            <div className={styles["info"]}>
+              <p className={styles["info-artist"]}>Dr. Warewolf</p>
+              <p className={styles["info-title"]}>Really bright moon II</p>
+            </div>
+            <span className={styles["material-icons"]}>play_circle</span>
+          </div>
+        </aside>
+        <main className={styles["player"]}>
+          <img className={styles["album-image"]} src="/assets/cover/drums.jpg" alt="A generic album cover" />
+          <div className={styles["player-info"]}>
+            <span className={styles["material-icons"]}>add_circle</span>
+            <div>
+              <p className={styles["info-artist"]}>Super Rockstar</p>
+              <p className={styles["info-title"]}>Crowd Apocalypse</p>
+            </div>
+            <span className={styles["material-icons"]}>favorite</span>
+          </div>
+          <div className={styles["seekbar"]}>
+            <p>0.40</p>
+            <progress className={styles["bar"]} id="seekbar" max={100} value={30}>30%</progress>
+            <p>3.42</p>
+          </div>
+          <div className={styles["controls"]}>
+            <span className={styles["material-icons"]}>repeat</span>
+            <div className={styles["center-buttons"]}>
+              <span className={styles["material-icons"]}>fast_rewind</span>
+              <span className={styles["material-icons"]}>play_circle</span>
+              <span className={styles["material-icons"]}>fast_forward</span>
+            </div>
+            <span className={styles["material-icons"]}>shuffle</span>
+          </div>
+        </main>
       </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+    </div>
   )
 }
