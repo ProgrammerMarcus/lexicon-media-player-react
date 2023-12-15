@@ -8,4 +8,18 @@
 
 body {
   margin: 0;
+  overflow: hidden;
+}
+
+/* Does not work in firefox */
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+@media (width < 770px) {
+  body {
+      overflow: auto;
+      display: flex;
+      flex-direction: column;
+  }
 }

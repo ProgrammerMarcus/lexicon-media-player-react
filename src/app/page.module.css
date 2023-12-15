@@ -1,10 +1,4 @@
 
-
-/* Does not work in firefox */
-.root::-webkit-scrollbar {
-  width: 0px;
-}
-
 .root {
   display: flex;
   align-items: stretch;
@@ -15,14 +9,20 @@
   padding: 0;
   color: white;
   font-family: Arial, Helvetica, sans-serif;
-  background: center / cover url("/assets/bg.webp"), var(--main-bg-color);
+  background: center / cover url("assets/bg.webp"), var(--main-bg-color);
   overflow: hidden;
   user-select: none;
+  .material-icons svg {
+    transform: scale(1);
+    width: 1.8em;
+    height: 1.8em;
+}
 }
 
 .navbar {
   position: sticky;
   display: flex;
+  color: white;
   justify-content: space-between;
   align-items: center;
   background-color: var(--main-bg-color);
@@ -72,9 +72,10 @@
           align-content: center;
       }
 
-      .play {
-          font-size: 1.5em;
-          margin: 0 1rem;
+      .play svg {
+        transform: scale(1);
+        width: 3em;
+        height: 3em;
       }
   }
 
@@ -223,23 +224,15 @@
 }
 
 @media (width < 770px) {
-  .root {
-      overflow: auto;
+    .player {
+        order: -1;
+        border: none;
+    }
+    .album-image {
+        margin-bottom: 1rem;
+    }
+    .tracks {
+        border: none;
+        height: fit-content;
+    }
   }
-  .root {
-      display: flex;
-      flex-direction: column;
-      overflow: auto;
-  }
-  .player {
-      order: -1;
-      border: none;
-  }
-  .album-image {
-      margin-bottom: 1rem;
-  }
-  .tracks {
-      border: none;
-      height: fit-content;
-  }
-}
